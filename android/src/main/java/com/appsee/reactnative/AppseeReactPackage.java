@@ -9,6 +9,7 @@ import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
+import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.ReadableMapKeySetIterator;
 import com.facebook.react.bridge.ReadableNativeArray;
@@ -107,7 +108,7 @@ public class AppseeReactPackage implements ReactPackage {
 
 	    // Taken from react source code on github
 	    // https://github.com/facebook/react-native/blob/master/ReactAndroid/src/main/java/com/facebook/react/bridge/ReadableNativeMap.java
-	    public HashMap<String, Object> toHashMap(ReadableNativeMap readableNativeMap)
+	    public HashMap<String, Object> toHashMap(ReadableMap readableNativeMap)
 	    {
 		    ReadableMapKeySetIterator iterator = readableNativeMap.keySetIterator();
 		    HashMap<String, Object> hashMap = new HashMap<>();
@@ -144,7 +145,7 @@ public class AppseeReactPackage implements ReactPackage {
 
 	    // Taken from react source code on github
 	    // https://github.com/facebook/react-native/blob/master/ReactAndroid/src/main/java/com/facebook/react/bridge/ReadableNativeArray.java
-	    public ArrayList<Object> toArrayList(ReadableNativeArray readableNativeArray)
+	    public ArrayList<Object> toArrayList(ReadableArray readableNativeArray)
 	    {
 		    ArrayList<Object> arrayList = new ArrayList<>();
 
